@@ -6,7 +6,7 @@ const Button = ({
   return (
     <>
     
-      <a href={buttonUrl} className="rts-btn btn-primary-5">
+      <a target='_blank' href={buttonUrl} className="rts-btn btn-primary-5">
         {buttonText} <i className="fal fa-arrow-right" />
       </a>
     </>

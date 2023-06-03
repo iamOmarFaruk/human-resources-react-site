@@ -1,11 +1,11 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect';
+import Button from './elements/Button';
 
 
-function HeroSection() {
+function HeroSection ({ typingText, headingText, headingTextBold, subHeading, buttonText, buttonLink  }) {
   return (
     <>
-      {/* rts banner area start */}
       <div
         className="rts-banner-area banner-human-bg rts-section-gap"
         id="banner"
@@ -16,13 +16,13 @@ function HeroSection() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              {/* banner area inner six */}
+
               <div className="banner-inner-six">
                 <h1 className="title mb--30">
                   <span className="pre">
                     <Typewriter
                       options={{
-                        strings: ['Let’s create', 'Awesome things with ReactJS'],
+                        strings: typingText,
                         autoStart: true,
                         loop: true,
                       }}
@@ -31,18 +31,19 @@ function HeroSection() {
                   your <span className="primary">success.</span>
                 </h1>
                 <p className="disc">
-                  HR consulting expertise that helps your business thrive.
+                  {subHeading}
                 </p>
-                <a href="#" className="rts-btn btn-primary-5 rounded-2">
-                  Let’s Work Together
-                </a>
+
+                <Button
+                  buttonText={buttonText}
+                  buttonUrl={buttonLink}
+                />
               </div>
-              {/* banner area inner six end */}
+
             </div>
           </div>
         </div>
       </div>
-      {/* rts banner area end */}
     </>
   )
 }

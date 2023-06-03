@@ -1,10 +1,11 @@
 import React from 'react'
 
-function HeaderSection () {
+function HeaderSection ({
+  promoText
+}) {
   return (
     <>
-      {/* start header area */}
-      {/* start header area */}
+      
       <header className="header--sticky header-one six">
         <div className="header-top header-top-one bg-1">
           <div className="container">
@@ -12,7 +13,7 @@ function HeaderSection () {
               <div className="col-lg-6 d-xl-block d-none">
                 <div className="left">
                   <p className="left-text">
-                    Are you ready to grow up your business?
+                    {promoText}
                   </p>
                 </div>
               </div>
@@ -330,10 +331,10 @@ function HeaderSection () {
             </a>
           </div>
         </div>
-        {/* inner menu area desktop End */}
+        
       </div>
       <div id="anywhere-home" />
-      {/* ENd Header Area */}
+     
 
     </>
   )
